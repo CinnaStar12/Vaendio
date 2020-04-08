@@ -8,7 +8,7 @@ function initMap() {
 }
 
 $(document).ready(function() {
-    $.get("/vendors").then(function (data) {
+    $.get("/api/vendors").then(function (data) {
         console.log(data);
         for (i = 0; i < data.length; i++) {
           var latLng = new google.maps.LatLng(data[i].latitude, data[i].longitude);
@@ -26,7 +26,7 @@ $(document).ready(function() {
           })
     
           var infowindow = new google.maps.InfoWindow();
-          var windowContent = ""
+          var windowContent = "" // html to go into window
           
           windowsArray.push(windowContent)
     
