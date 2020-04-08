@@ -9,7 +9,7 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.DECIMAL,
         },
         onHand: {
-            type: DataTypes.INT
+            type: DataTypes.INTEGER
         },
         forSale: {
             type: DataTypes.BOOLEAN
