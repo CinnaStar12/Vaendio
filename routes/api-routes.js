@@ -3,6 +3,18 @@ var db = require("../models");
 var passport = require("../config/passport");
 
 module.exports = function(app) {
+  app.get("/api/vendors", function(req, res) {
+    db.User.findAll({
+      where: {
+        vendor: 1
+      }
+    }).then((data)=>{ 
+      console.log(data)
+    })
+     // send array/object of all locations to pin on map
+  })
+
+
   // Using the passport.authenticate middleware with our local strategy.
   // If the user has valid login credentials, send them to the members page.
   // Otherwise the user will be sent an error
@@ -20,7 +32,8 @@ module.exports = function(app) {
   app.post("/api/signup", function(req, res) {
     db.User.create({
       email: req.body.email,
-      password: req.body.password
+      password: req.body.password,
+      vendor: req.body.vendor
     })
       .then(function() {
         res.redirect(307, "/api/login");
