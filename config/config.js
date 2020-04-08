@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 require('dotenv').config();
 module.exports = {
   "development": {
@@ -9,7 +10,7 @@ module.exports = {
   },
   "test": {
     "username": "root",
-    "password": null,
+    "password": "Nuid.2013",
     "database": "database_test",
     "host": "127.0.0.1",
     "dialect": "mysql"
