@@ -5,6 +5,8 @@ function initMap() {
         center: { lat: 29.7604, lng: -95.3698 },
         zoom: 11
     });
+
+    
 }
 
 $(document).ready(function() {

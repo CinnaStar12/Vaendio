@@ -1,7 +1,11 @@
 module.exports = function(sequelize, DataTypes) {
     var Storefront = sequelize.define("Inventory", {
-        location: {
-            type: DataTypes.STRING,
+        latitude: {
+            type: DataTypes.DECIMAL,
+            allowNull: false
+        },
+        longitude: {
+            type: DataTypes.DECIMAL,
             allowNull: false
         },
         paymentTypes: {
@@ -19,5 +23,5 @@ module.exports = function(sequelize, DataTypes) {
         })
     }
 
-    return Storefront
+    return Storefront;
 }
