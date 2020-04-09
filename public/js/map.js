@@ -32,7 +32,7 @@ $(document).ready(function() {
           
           windowsArray.push(windowContent)
     
-          google.maps.event.addListener(marker, "click", (function (marker) {
+          google.maps.event.addListener(marker, "click", (function (marker) { // replace window content with overlay
             return function () {
               console.log(windowsArray[marker.index])
               var content = windowsArray[marker.index];
