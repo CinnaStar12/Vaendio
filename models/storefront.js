@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-    var Storefront = sequelize.define("Inventory", {
+    var Storefront = sequelize.define("Storefront", {
         latitude: {
             type: DataTypes.DECIMAL,
             allowNull: false
