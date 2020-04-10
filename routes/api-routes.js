@@ -86,22 +86,4 @@ module.exports = function(app) {
     }
   });
 
-<<<<<<< Updated upstream
-  app.post("/api/storefronts", function(req, res) {
-    db.Storefront.create({
-      latitude: req.body.latitude,
-      longitude: req.body.longitude,
-      paymentTypes: req.body.paymentTypes,
-      time: req.body.time
-    }).then(function(results) {
-      
-      res.send(results)
-
-    }).catch(function(err) {
-      res.send(err)
-    })
-    
-  })
-=======
->>>>>>> Stashed changes
 };
