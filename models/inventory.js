@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 module.exports = function(sequelize, DataTypes) {
     var Inventory = sequelize.define("Inventory", {
-        product_name: {
+        productName: {
             type: DataTypes.STRING,
             allowNull: false,
 
@@ -10,7 +10,7 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.DECIMAL,
         },
         onHand: {
-            type: DataTypes.INTEGER
+            type: DataTypes.INTEGER(3)
         },
         forSale: {
             type: DataTypes.BOOLEAN

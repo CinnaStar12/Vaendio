@@ -1,6 +1,13 @@
-{
-  "development": {
+
+
+require('dotenv').config();
+module.exports = {
+  "development": 
+  {
+    "username": "root",
+    "password": "Nuid.2013",
     "database": "passport_demo",
+    "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
@@ -14,4 +21,4 @@
     "use_env_variable": "JAWSDB_URL",
     "dialect": "mysql"
   }
-}
+};
