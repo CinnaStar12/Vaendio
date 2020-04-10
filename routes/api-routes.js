@@ -42,20 +42,33 @@ module.exports = function(app) {
         res.status(401).json(err);
       });
   });
-  app.post("api/inventory", function(req, res) {
+  app.post("api/user_data/inventory", function(req, res) {
     db.Inventory.create({
       productName: req.body.product_name,
       price: req.body.price,
       onHand: req.body.onHand,
-      forSale: req.body.forSale
+      forSale: req.body.forSale,
+      User: req.user
+    })
+  });
+  app.get("api/user_data/inventory/:id", function(req, res) {
+    db.findAll({
+      where: {
+        id: req.user.id
+      }
+    }).then(function(data) {
+      res.json(data)
     })
   })
+
   app.post("/api/storefronts", function(req, res) {
+    passport.authenticate('basic', { session: false })
     db.Storefront.create({
       latitude: req.body.latitude,
       longitude: req.body.longitude,
       paymentTypes: req.body.paymentTypes,
-      time: req.body.time
+      time: req.body.time,
+      UserId: req.user
     })
     .then(function() {
       res.status(201)
@@ -64,6 +77,12 @@ module.exports = function(app) {
       res.status(401).json(err)
     })
   })
+
+  app.get("/api/storefronts", function(req, res) {
+    res.json(req.Storefront)
+  });
+
+  
 
   // Route for logging user out
   app.get("/logout", function(req, res) {
