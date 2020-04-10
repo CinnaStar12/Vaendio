@@ -42,6 +42,28 @@ module.exports = function(app) {
         res.status(401).json(err);
       });
   });
+  app.post("api/inventory", function(req, res) {
+    db.Inventory.create({
+      productName: req.body.product_name,
+      price: req.body.price,
+      onHand: req.body.onHand,
+      forSale: req.body.forSale
+    })
+  })
+  app.post("/api/storefronts", function(req, res) {
+    db.Storefront.create({
+      latitude: req.body.latitude,
+      longitude: req.body.longitude,
+      paymentTypes: req.body.paymentTypes,
+      time: req.body.time
+    })
+    .then(function() {
+      res.status(201)
+    })
+    .catch(function(err) {
+      res.status(401).json(err)
+    })
+  })
 
   // Route for logging user out
   app.get("/logout", function(req, res) {
@@ -63,4 +85,5 @@ module.exports = function(app) {
       });
     }
   });
+
 };

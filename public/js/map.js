@@ -5,6 +5,8 @@ function initMap() {
         center: { lat: 29.7604, lng: -95.3698 },
         zoom: 11
     });
+
+    
 }
 
 $(document).ready(function() {
@@ -42,4 +44,8 @@ $(document).ready(function() {
         }
     
       });
+<<<<<<< HEAD
 })
+=======
+})
+>>>>>>> 304a57952b9b88ebb1518a5951d0e67d4c5b9e4b
