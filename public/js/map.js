@@ -44,12 +44,17 @@ function initMap() {
     })
 
     google.maps.event.addListener(marker, "click", function (marker) {
-      console.log(marker)
+      $("#overlay").css("display","block")
+      console.log("click")
     })
     // replace window content with overlay
 
     markersArray.push(marker);
   }
+
+}
+function closeOverlay(){
+  $("#overlay").css("display","none")
 }
 
 // $(document).ready(function () {
