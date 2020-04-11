@@ -23,26 +23,27 @@
 
 <body>
 
-<div class="container-fluid">
-  <div class="row">
-    <div class="col">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Vaendio</a>
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Logout</a>
-        </li>
-          <li>
-            <a class="nav-link" data-toggle="collapse" data-target="#inventory" href="#">Current Inventory</a>
-          </li>
-          <li>
-          <a class="nav-link" data-toggle="collapse" data-target="#stores" href="#">Current Storefronts</a>
-          </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <a class="navbar-brand" href="#">Vaendio</a>
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Logout</a>
+            </li>
+            <li>
+              <a class="nav-link" data-toggle="collapse" data-target="#inventory" href="#">Current Inventory</a>
+            </li>
+            <li>
+              <a class="nav-link" data-toggle="collapse" data-target="#stores" href="#">Current Storefronts</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+      </div>
     </div>
     <div class="row">
       <div class="col">
@@ -92,41 +93,59 @@
         </div>
         <div class="row">
           <div class="col">
-      <div class="collapse" id="stores">
-        <div class="card">
-          <div class="card-body">    
-                <nav>
-                  <div class="nav nav-tabs" id="nav-tab2" role="tablist">
-                    <a class="nav-item nav-link active" id="nav-addStr-tab" data-toggle="tab" href="#nav-addStr"
-                      role="tab" aria-controls="nav-addStr" aria-selected="true">Add</a>
-                    <a class="nav-item nav-link" id="nav-updatStr-tab" data-toggle="tab" href="#nav-updateStr"
-                      role="tab" aria-controls="nav-updateStr" aria-selected="false">Update</a>
-                    <a class="nav-item nav-link" id="nav-deleteStr-tab" data-toggle="tab" href="#nav-deleteStr"
-                      role="tab" aria-controls="nav-deleteStr" aria-selected="false">Delete</a>
+            <div class="collapse" id="stores">
+              <div class="card">
+                <div class="card-body">
+                  <nav>
+                    <div class="nav nav-tabs" id="nav-tab2" role="tablist">
+                      <a class="nav-item nav-link active" id="nav-addStr-tab" data-toggle="tab" href="#nav-addStr"
+                        role="tab" aria-controls="nav-addStr" aria-selected="true">Add</a>
+                      <a class="nav-item nav-link" id="nav-updatStr-tab" data-toggle="tab" href="#nav-updateStr"
+                        role="tab" aria-controls="nav-updateStr" aria-selected="false">Update</a>
+                      <a class="nav-item nav-link" id="nav-deleteStr-tab" data-toggle="tab" href="#nav-deleteStr"
+                        role="tab" aria-controls="nav-deleteStr" aria-selected="false">Delete</a>
 
-                  </div>
-                </nav>
-                <div class="tab-content" id="nav-tabContent2">
-                  <div class="tab-pane fade show active" id="nav-addStr" role="tabpanel" aria-labelledby="nav-home-tab">
-                    <form>
-                      <div class="form-group">
-                        <label for="inputAddress">Address</label>
-                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-                      </div>
-                      <div class="form-group">
-                        <label for="inputAddress2">Address 2</label>
-                        <input type="text" class="form-control" id="inputAddress2"
-                          placeholder="Apartment, studio, or floor">
-                      </div>
-                      <div class="form-row">
-                        <div class="form-group col-md-6">
-                          <label for="inputCity">City</label>
-                          <input type="text" class="form-control" id="inputCity">
+                    </div>
+                  </nav>
+                  <div class="tab-content" id="nav-tabContent2">
+                    <div class="tab-pane fade show active" id="nav-addStr" role="tabpanel"
+                      aria-labelledby="nav-home-tab">
+                      <form>
+                        <div class="form-group">
+                          <label for="inputAddress">Address</label>
+                          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
                         </div>
-                       <div class="form-row">
-                    <div class="form-group col-md-6">
-                      <label for="inputCity">City</label>
-                      <input type="text" class="form-control" id="inputCity">
+                        <div class="form-group">
+                          <label for="inputAddress2">Address 2</label>
+                          <input type="text" class="form-control" id="inputAddress2"
+                            placeholder="Apartment, studio, or floor">
+                        </div>
+                        <div class="form-row">
+                          <div class="form-group col-md-6">
+                            <label for="inputCity">City</label>
+                            <input type="text" class="form-control" id="inputCity">
+                          </div>
+                          <div class="form-row">
+                            <div class="form-group col-md-6">
+                              <label for="inputCity">City</label>
+                              <input type="text" class="form-control" id="inputCity">
+                            </div>
+                            <div class="tab-pane fade" id="nav-updateStr" role="tabpanel"
+                              aria-labelledby="nav-home-tab">
+                              <ul>
+
+                              </ul>
+                            </div>
+                            <div class="tab-pane fade" id="nav-deleteStr" role="tabpanel"
+                              aria-labelledby="nav-home-tab">
+                              <ul>
+
+                              </ul>
+                            </div>
+                          </div>
+                          <button type="submit" class="btn btn-primary">submit</button>
+                      </form>
+
                     </div>
                     <div class="tab-pane fade" id="nav-updateStr" role="tabpanel" aria-labelledby="nav-home-tab">
                       <ul>
@@ -139,28 +158,15 @@
                       </ul>
                     </div>
                   </div>
-                  <button type="submit" class="btn btn-primary">submit</button>
-                </form>
-                  
+                </div>
               </div>
-              <div class="tab-pane fade" id="nav-updateStr" role="tabpanel" aria-labelledby="nav-home-tab">
-                <ul>
-
-                </ul>
-              </div>
-              <div class="tab-pane fade" id="nav-deleteStr" role="tabpanel" aria-labelledby="nav-home-tab">
-                <ul>
-
-                </ul>
-              </div>
-            </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-
+</div>
 
   <div id="overlay">
     <div id="container" class="overlayBody">
