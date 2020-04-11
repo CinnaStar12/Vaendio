@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Passport Authentication</title>
+  <title>Vaendio</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -18,18 +18,7 @@
   <div class="row">
     <div class="col">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-<<<<<<< HEAD
-    <a class="navbar-brand" href="#">App Title</a>
-=======
-    <a class="navbar-brand" href="./map.html">Vændio</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
->>>>>>> 9ca2af7f339494f0a080bda59af8eaaae3a729ba
+    <a class="navbar-brand" href="#">Vaendio</a>
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
           <a class="nav-link" href="#">Logout</a>
@@ -50,6 +39,8 @@
   <div class="row">
     <div class="col">
       <div class="collapse" id="inventory">
+        <div class="card">
+          <div class="card-body">
             <nav>
               <div class="nav nav-tabs" id="nav-tab" role="tablist">
                 <a class="nav-item nav-link active" id="nav-add-tab" data-toggle="tab" href="#nav-add" role="tab" aria-controls="nav-add" aria-selected="true">Add</a>
@@ -69,22 +60,30 @@
                     <input type="number" min="0" max="5000" step="1" id="">
                   </div>
                   <div class="form-group">
-                    <input type="submit" class="btn btn-primary btn-sm" value="submit">
+                    <input type="submit" class="btn btn-primary" value="submit">
                   </div>
                 </form>
               
               </div>
               <div class="tab-pane fade" id="nav-update" role="tabpanel" aria-labelledby="nav-profile-tab">
+                <ul>
 
+                </ul>
               </div>
               <div class="tab-pane fade" id="nav-delete" role="tabpanel" aria-labelledby="nav-contact-tab">
-
+                <ul>
+                  
+                </ul>
               </div>
             </div>
-      </div>
-      <div class="collapse" id="stores">
+            </div>
+          </div>
+        </div>
         <div class="row">
           <div class="col">
+      <div class="collapse" id="stores">
+        <div class="card">
+          <div class="card-body">    
             <nav>
               <div class="nav nav-tabs" id="nav-tab2" role="tablist">
                 <a class="nav-item nav-link active" id="nav-addStr-tab" data-toggle="tab" href="#nav-addStr" role="tab" aria-controls="nav-addStr" aria-selected="true">Add</a>
@@ -112,7 +111,56 @@
                       <label for="inputState">State</label>
                       <select id="inputState" class="form-control">
                         <option selected>Choose...</option>
-                        <option>...</option>
+                        <option value="Alabama">Alabama</option>
+                        <option value="Alaska">Alaska</option>
+                        <option value="Arizona">Arizona</option>
+                        <option value="Arkansas">Arkansas</option>
+                        <option value="California">California</option>
+                        <option value="Colorado">Colorado</option>
+                        <option value="Connecticut">Connecticut</option>
+                        <option value="Delaware">Delaware</option>
+                        <option value="Florida">Florida</option>
+                        <option value="Georgia">Georgia</option>
+                        <option value="Hawaii">Hawaii</option>
+                        <option value="Idaho">Idaho</option>
+                        <option value="Illinois">Illinois</option>
+                        <option value="Indiana">Indiana</option>
+                        <option value="Iowa">Iowa</option>
+                        <option value="Kansas">Kansas</option>
+                        <option value="Kentucky">Kentucky</option>
+                        <option value="Louisiana">Louisiana</option>
+                        <option value="Maine"> Maine</option>
+                        <option value="Maryland">Maryland</option>
+                        <option value="Massachusetts">Massachusetts</option>
+                        <option value="Michigan">Michigan</option>
+                        <option value="Minnesota">Minnesota</option>
+                        <option value="Mississippi">Mississippi</option>
+                        <option value="Missouri">Missouri</option>
+                        <option value="Montana">Montana</option>
+                        <option value="Nebraska">Nebraska</option>
+                        <option value="Nevada">Nevada</option>
+                        <option value="New Hampshire">New Hampshire</option>
+                        <option value="New Jersey">New Jersey</option>
+                        <option value="New Mexico">NEw Mexico</option>
+                        <option value="New York">New York</option>
+                        <option value="North Carolina">North Carolina</option>
+                        <option value="North Dakota">North Dakota</option>
+                        <option value="Ohio">Ohio</option>
+                        <option value="Oklahoma">Oklahoma</option>
+                        <option value="Oregon">Oregon</option>
+                        <option value="Pennsylvania">Pennsylvania</option>
+                        <option value="Rhode Island">Rhode Island</option>
+                        <option value="South Carolina">South Carolina</option>
+                        <option value="South Dakota">South Dakota</option>
+                        <option value="Tennessee">Tennessee</option>
+                        <option value="Texas">Texas</option>
+                        <option value="Utah">Utah</option>
+                        <option value="Vermont">Vermont</option>
+                        <option value="Virginia">Virginia</option>
+                        <option value="Washington">Washington</option>
+                        <option value="West Virginia">West Virginia</option>
+                        <option value="Wisconsin">Wisconsin</option>
+                        <option value="Wyoming">Wyoming</option>
                       </select>
                     </div>
                     <div class="form-group col-md-2">
@@ -120,16 +168,22 @@
                       <input type="text" class="form-control" id="inputZip">
                     </div>
                   </div>
-                  <button type="submit" class="btn btn-primary">Update</button>
+                  <button type="submit" class="btn btn-primary">submit</button>
                 </form>
               </div>
               <div class="tab-pane fade" id="nav-updateStr" role="tabpanel" aria-labelledby="nav-home-tab">
+                <ul>
 
+                </ul>
               </div>
               <div class="tab-pane fade" id="nav-deleteStr" role="tabpanel" aria-labelledby="nav-home-tab">
+                <ul>
 
+                </ul>
               </div>
             </div>
+            </div> 
+          </div> 
           </div>
 
         </div>
