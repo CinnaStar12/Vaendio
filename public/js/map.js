@@ -57,7 +57,6 @@ function closeOverlay(){
   $("#overlay").css("display","none")
 }
 
-<<<<<<< HEAD
 $(document).ready(function() {
     $.get("/api/vendors").then(function (data) {
         console.log(data);
@@ -93,15 +92,9 @@ $(document).ready(function() {
         }
     
       });
-<<<<<<< HEAD
 })
-=======
-})
->>>>>>> 304a57952b9b88ebb1518a5951d0e67d4c5b9e4b
-=======
 // $(document).ready(function () {
 //   // $.get("/api/vendors").then(function (data) {
 //   //   console.log(data);
 //   // });
 // })
->>>>>>> 9ca2af7f339494f0a080bda59af8eaaae3a729ba
