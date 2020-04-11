@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="./stylesheets/chat.css">
+<div class="cotainer">
+   
+       
+    <div>
+        <form id="message-form">
+            <div>
+                <input type="text" id="user-message" placeholder="Enter your message">
+            </div>
+            <div>
+                <input type="submit" class="btn" value="Send!" />
+            </div>
+        </form>
+        <ul id="messages"></ul>
+    </div>
+</div>
+<script defer src="/socket.io/socket.io.js"></script>
+<script src="./js/client.js"></script>

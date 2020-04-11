@@ -1,0 +1,32 @@
+body {
+    justify-content: center;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+input {
+    width: 90%;
+
+}
+
+#messages {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#messages li {
+    padding: 5px 10px;
+}
+
+#messages li:nth-child(odd) {
+    background: #eee;
+}
+
+.btn {
+    background-color: rgb(115, 255, 0);
+}
+.user-message {
+    list-style-type: none;
+}
