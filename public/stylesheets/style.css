@@ -39,3 +39,6 @@ html, body {
   background-color: antiquewhite;
   padding: 100%;
 }
+.form-check-input{
+  margin-left: 20px;
+}

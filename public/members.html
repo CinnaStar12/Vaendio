@@ -9,52 +9,63 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link href="stylesheets/style.css" rel="stylesheet">
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrWOit0v-QYF9j_8TSM7S6wyLCyAZalJI&callback=initMap">
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/map.js"></script>
 </head>
 
 <body>
-<div class="container-fluid">
-  <div class="row">
-    <div class="col">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-<<<<<<< HEAD
-    <a class="navbar-brand" href="#">App Title</a>
-=======
-    <a class="navbar-brand" href="./map.html">Vændio</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <a class="navbar-brand" href="./map.html">Vændio</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
->>>>>>> 9ca2af7f339494f0a080bda59af8eaaae3a729ba
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Logout</a>
-        </li>
-          <li>
-            <a class="nav-link" data-toggle="collapse" data-target="#inventory" href="#">Current Inventory</a>
-          </li>
-          <li>
-          <a class="nav-link" data-toggle="collapse" data-target="#stores" href="#">Current Storefronts</a>
-          </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <div class="collapse" id="inventory">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Logout</a>
+              </li>
+              <li>
+                <a class="nav-link" data-toggle="collapse" data-target="#inventory" href="#">Current Inventory</a>
+              </li>
+              <li>
+                <a class="nav-link" data-toggle="collapse" data-target="#stores" href="#">Current Storefronts</a>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+          </div>
+        </nav>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="collapse" id="inventory">
             <nav>
               <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                <a class="nav-item nav-link active" id="nav-add-tab" data-toggle="tab" href="#nav-add" role="tab" aria-controls="nav-add" aria-selected="true">Add</a>
-                <a class="nav-item nav-link" id="nav-update-tab" data-toggle="tab" href="#nav-update" role="tab" aria-controls="nav-update" aria-selected="false">Update</a>
-                <a class="nav-item nav-link" id="nav-delete-tab" data-toggle="tab" href="#nav-delete" role="tab" aria-controls="nav-delete" aria-selected="false">Delete</a>
+                <a class="nav-item nav-link active" id="nav-add-tab" data-toggle="tab" href="#nav-add" role="tab"
+                  aria-controls="nav-add" aria-selected="true">Add</a>
+                <a class="nav-item nav-link" id="nav-update-tab" data-toggle="tab" href="#nav-update" role="tab"
+                  aria-controls="nav-update" aria-selected="false">Update</a>
+                <a class="nav-item nav-link" id="nav-delete-tab" data-toggle="tab" href="#nav-delete" role="tab"
+                  aria-controls="nav-delete" aria-selected="false">Delete</a>
               </div>
             </nav>
             <div class="tab-content" id="nav-tabContent">
@@ -72,7 +83,7 @@
                     <input type="submit" class="btn btn-primary btn-sm" value="submit">
                   </div>
                 </form>
-              
+
               </div>
               <div class="tab-pane fade" id="nav-update" role="tabpanel" aria-labelledby="nav-profile-tab">
 
@@ -81,69 +92,117 @@
 
               </div>
             </div>
-      </div>
-      <div class="collapse" id="stores">
-        <div class="row">
-          <div class="col">
-            <nav>
-              <div class="nav nav-tabs" id="nav-tab2" role="tablist">
-                <a class="nav-item nav-link active" id="nav-addStr-tab" data-toggle="tab" href="#nav-addStr" role="tab" aria-controls="nav-addStr" aria-selected="true">Add</a>
-                <a class="nav-item nav-link" id="nav-updatStr-tab" data-toggle="tab" href="#nav-updateStr" role="tab" aria-controls="nav-updateStr" aria-selected="false">Update</a>
-                <a class="nav-item nav-link" id="nav-deleteStr-tab" data-toggle="tab" href="#nav-deleteStr" role="tab" aria-controls="nav-deleteStr" aria-selected="false">Delete</a>
-              </div>
-            </nav>
-            <div class="tab-content" id="nav-tabContent2">
-              <div class="tab-pane fade show active" id="nav-addStr" role="tabpanel" aria-labelledby="nav-home-tab">
-                <form>
-                  <div class="form-group">
-                    <label for="inputAddress">Address</label>
-                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+          </div>
+          <div class="collapse" id="stores">
+            <div class="row">
+              <div class="col">
+                <nav>
+                  <div class="nav nav-tabs" id="nav-tab2" role="tablist">
+                    <a class="nav-item nav-link active" id="nav-addStr-tab" data-toggle="tab" href="#nav-addStr"
+                      role="tab" aria-controls="nav-addStr" aria-selected="true">Add</a>
+                    <a class="nav-item nav-link" id="nav-updatStr-tab" data-toggle="tab" href="#nav-updateStr"
+                      role="tab" aria-controls="nav-updateStr" aria-selected="false">Update</a>
+                    <a class="nav-item nav-link" id="nav-deleteStr-tab" data-toggle="tab" href="#nav-deleteStr"
+                      role="tab" aria-controls="nav-deleteStr" aria-selected="false">Delete</a>
                   </div>
-                  <div class="form-group">
-                    <label for="inputAddress2">Address 2</label>
-                    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                </nav>
+                <div class="tab-content" id="nav-tabContent2">
+                  <div class="tab-pane fade show active" id="nav-addStr" role="tabpanel" aria-labelledby="nav-home-tab">
+                    <form>
+                      <div class="form-group">
+                        <label for="inputAddress">Address</label>
+                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                      </div>
+                      <div class="form-group">
+                        <label for="inputAddress2">Address 2</label>
+                        <input type="text" class="form-control" id="inputAddress2"
+                          placeholder="Apartment, studio, or floor">
+                      </div>
+                      <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <label for="inputCity">City</label>
+                          <input type="text" class="form-control" id="inputCity">
+                        </div>
+                        <div class="form-group col-md-4">
+                          <label for="inputState">State</label>
+                          <select id="inputState" class="form-control">
+                            <option selected>Choose...</option>
+                            <option>...</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="inputZip">Zip</label>
+                          <input type="text" class="form-control" id="inputZip">
+                        </div>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Update</button>
+                    </form>
                   </div>
-                  <div class="form-row">
-                    <div class="form-group col-md-6">
-                      <label for="inputCity">City</label>
-                      <input type="text" class="form-control" id="inputCity">
-                    </div>
-                    <div class="form-group col-md-4">
-                      <label for="inputState">State</label>
-                      <select id="inputState" class="form-control">
-                        <option selected>Choose...</option>
-                        <option>...</option>
-                      </select>
-                    </div>
-                    <div class="form-group col-md-2">
-                      <label for="inputZip">Zip</label>
-                      <input type="text" class="form-control" id="inputZip">
-                    </div>
-                  </div>
-                  <button type="submit" class="btn btn-primary">Update</button>
-                </form>
-              </div>
-              <div class="tab-pane fade" id="nav-updateStr" role="tabpanel" aria-labelledby="nav-home-tab">
+                  <div class="tab-pane fade" id="nav-updateStr" role="tabpanel" aria-labelledby="nav-home-tab">
 
-              </div>
-              <div class="tab-pane fade" id="nav-deleteStr" role="tabpanel" aria-labelledby="nav-home-tab">
+                  </div>
+                  <div class="tab-pane fade" id="nav-deleteStr" role="tabpanel" aria-labelledby="nav-home-tab">
 
+                  </div>
+                </div>
               </div>
+
             </div>
           </div>
-
         </div>
-      </div>
       </div>
     </div>
   </div>
-  
-</nav>
 
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="js/members.js"></script>
+
+
+  <div id="overlay">
+    <div id="container" class="overlayBody">
+      <button type="button" id="closeOverlay" onclick="closeOverlay()" class="btn btn-outline-danger">x</button>
+      <Table class="table" striped bordered hover size="sm">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Item</th>
+            <th>Price</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Onions</td>
+            <td>$3/onion</td>
+            <td>
+              <button type="button" class="btn btn-outline-success">Add to order</button>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Carrots</td>
+            <td>$3/carrot</td>
+            <td>
+              <button type="button" class="btn btn-outline-success">Add to order</button>
+            </td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Potatoes</td>
+            <td>$3/potatoes</td>
+            <td>
+              <button type="button" class="btn btn-outline-success">Add to order</button>
+            </td>
+          </tr>
+        </tbody>
+      </Table>
+    </div>
+  </div>
+
+  <div id="map"></div>
+
+
+
+
 </body>
 
 </html>
