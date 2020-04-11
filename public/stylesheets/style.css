@@ -58,7 +58,6 @@ h1{
 }
 #navbar{
   background-color: #299600;
-
 }
 #map{
   margin-left: 10px;
@@ -68,4 +67,8 @@ h1{
   color: #6D0096;
   font-size: xx-large;
   font-weight: bolder;
+}
+h2{
+  text-align: center;
+  
 }
