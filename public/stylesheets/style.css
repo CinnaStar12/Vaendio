@@ -42,3 +42,11 @@ html, body {
 .form-check-input{
   margin-left: 20px;
 }
+#footer{
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+h1{
+  text-align: center;
+}
