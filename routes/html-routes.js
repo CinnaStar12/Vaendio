@@ -25,8 +25,6 @@ module.exports = function(app) {
   app.get("/map", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/map.html"));
   });
-<<<<<<< HEAD
-=======
   
   app.get("/signup", function(req,res) {
     if (req.user) {
@@ -34,12 +32,11 @@ module.exports = function(app) {
     }
     res.sendFile(path.join(__dirname, "../public/signup.html"))
   })
->>>>>>> 304a57952b9b88ebb1518a5951d0e67d4c5b9e4b
 
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
   app.get("/members", isAuthenticated, function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/map.html"));
+    res.sendFile(path.join(__dirname, "../public/members.html"));
   });
 
 };

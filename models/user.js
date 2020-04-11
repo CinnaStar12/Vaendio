@@ -39,12 +39,9 @@ module.exports = function(sequelize, DataTypes) {
     User.hasMany(models.Inventory, {
       onDelete: "cascade"
     })
-<<<<<<< HEAD
-=======
     User.hasMany(models.Storefront, {
       onDelete: "cascade"
     })
->>>>>>> 304a57952b9b88ebb1518a5951d0e67d4c5b9e4b
   }
   return User;
 };
