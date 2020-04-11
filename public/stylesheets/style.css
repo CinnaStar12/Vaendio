@@ -5,7 +5,13 @@ form.login {
 #map {
   height: 100%;
 }
-html, body {
+html{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: #299600;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -43,10 +49,23 @@ html, body {
   margin-left: 20px;
 }
 #footer{
-  background-color: black;
-  color: white;
+  background-color: #299600;
+  color: #6D0096;
   text-align: center;
 }
 h1{
   text-align: center;
+}
+#navbar{
+  background-color: #299600;
+
+}
+#map{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#logo{
+  color: #6D0096;
+  font-size: xx-large;
+  font-weight: bolder;
 }

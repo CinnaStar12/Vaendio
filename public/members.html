@@ -23,11 +23,11 @@
 
 <body>
 
-  <div class="container-fluid">
+  <div id="navbar" class="container-fluid">
     <div class="row">
       <div class="col">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <a class="navbar-brand" href="#">Vaendio</a>
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a id="logo" class="navbar-brand" href="#">Vændio</a>
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
               <a class="nav-link" href="#">Logout</a>
@@ -41,7 +41,7 @@
           </ul>
           <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <button class="btn btn-success" type="submit">Search</button>
           </form>
       </div>
     </div>
@@ -64,15 +64,15 @@
                 <div class="tab-pane fade show active" id="nav-add" role="tabpanel" aria-labelledby="nav-home-tab">
                   <form>
                     <div class="form-group">
-                      <label for="formControlInput1">Item Name</label>
-                      <input type="text" class="form-control" id="innput1" placeholder="item name">
+                      <label for="formControlInput1"></label>
+                      <input type="text" class="form-control" id="innput1" placeholder="Item name">
                     </div>
                     <div class="form-group">
-                      <label for="formControlSelect1">Number in stock</label>
+                      <label for="formControlSelect1">Amount in stock</label>
                       <input type="number" min="0" max="5000" step="1" id="">
                     </div>
                     <div class="form-group">
-                      <input type="submit" class="btn btn-primary" value="submit">
+                      <input type="submit" class="btn btn-success" placeholder="Submit">
                     </div>
                   </form>
 
@@ -127,8 +127,8 @@
                           </div>
                           <div class="form-row">
                             <div class="form-group col-md-6">
-                              <label for="inputCity">City</label>
-                              <input type="text" class="form-control" id="inputCity">
+                              <label for="inputState">State</label>
+                              <input type="text" class="form-control" id="inputState">
                             </div>
                             <div class="tab-pane fade" id="nav-updateStr" role="tabpanel"
                               aria-labelledby="nav-home-tab">
@@ -143,7 +143,7 @@
                               </ul>
                             </div>
                           </div>
-                          <button type="submit" class="btn btn-primary">submit</button>
+                          <button type="submit" class="btn btn-success">Submit</button>
                       </form>
 
                     </div>
@@ -170,7 +170,7 @@
 
   <div id="overlay">
     <div id="container" class="overlayBody">
-      <button type="button" id="closeOverlay" onclick="closeOverlay()" class="btn btn-outline-danger">x</button>
+      <button type="button" id="closeOverlay" onclick="closeOverlay()" class="btn btn-danger">x</button>
       <h1>Bobby's Store</h1>
       <Table class="table" striped bordered hover size="sm">
         <thead>
@@ -187,7 +187,7 @@
             <td>Onions</td>
             <td>$3/onion</td>
             <td>
-              <button type="button" class="btn btn-outline-success">Add to order</button>
+              <button type="button" class="btn btn-success">Add to order</button>
             </td>
           </tr>
           <tr>
@@ -195,7 +195,7 @@
             <td>Carrots</td>
             <td>$3/carrot</td>
             <td>
-              <button type="button" class="btn btn-outline-success">Add to order</button>
+              <button type="button" class="btn btn-success">Add to order</button>
             </td>
           </tr>
           <tr>
@@ -203,7 +203,7 @@
             <td>Potatoes</td>
             <td>$3/potatoes</td>
             <td>
-              <button type="button" class="btn btn-outline-success">Add to order</button>
+              <button type="button" class="btn btn-success">Add to order</button>
             </td>
           </tr>
         </tbody>
