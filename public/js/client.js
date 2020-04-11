@@ -1,5 +1,7 @@
-const socket = io('http://localhost8080'); // the / namespace/endpoint
-const socket2 = io('http://localhost:8080/admin') //the /admin namespace
+const socket = io.connect('http://localhost:8080'); 
+const socket2 = io.conect('http://localhost:8080/admin') 
+
+
 console.log(socket.io)
 socket.on('connect',()=>{
     console.log(socket.id)

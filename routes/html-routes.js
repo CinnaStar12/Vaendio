@@ -39,7 +39,8 @@ module.exports = function(app) {
   app.get("/members", isAuthenticated, function(req, res) {
     res.sendFile(path.join(__dirname, "../public/members.html"));
   });
-  app.get("/", function(req, res) {
+
+  app.get("/chat", function(req, res) {
     if (req.user) {
       res.redirect("/chat");
     }
