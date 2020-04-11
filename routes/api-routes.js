@@ -1,6 +1,7 @@
 // Requiring our models and passport as we've configured it
 var db = require("../models");
 var passport = require("../config/passport");
+const io = socketio(app);
 
 module.exports = function (app) {
   app.get("/api/vendors", function (req, res) {
@@ -125,3 +126,23 @@ module.exports = function (app) {
   
 
 };
+io.on('connection',(socket)=>{
+  console.log("Someone connected")
+  socket.emit('messageFromServer',{data:"Welcome to the Vaendio server"});
+  socket.on('messageToServer',(dataFromClient)=>{
+      console.log(dataFromClient)
+  })
+  socket.on('newMessageToServer',(msg)=>{
+   
+      io.of('/').emit('messageToClients',{text:msg.text})
+  })
+
+  setTimeout(()=>{
+      io.of('/admin').emit('welcome',"Welcome to Vaendio!")
+  },2000)
+})
+
+io.of('/admin').on('connection',(socket)=>{
+  console.log("Someone connected!")
+  io.of('/admin').emit('welcome',"Welcome to the admin channel!");
+})

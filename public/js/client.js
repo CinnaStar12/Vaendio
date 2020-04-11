@@ -1,35 +1,33 @@
-
+const socket = io('http://localhost8080'); // the / namespace/endpoint
+const socket2 = io('http://localhost:8080/admin') //the /admin namespace
+console.log(socket.io)
 socket.on('connect',()=>{
     console.log(socket.id)
 })
+
 socket2.on('connect',()=>{
     console.log(socket2.id)
 })
 
-socket.on('messageFromServer', (dataFromServer)=>{
+socket.on('welcome',(msg)=>{
+    console.log(msg)
+})
+socket2.on('welcome',(msg)=>{
+    console.log(msg)
+})
+
+
+socket.on('messageFromServer',(dataFromServer)=>{
     console.log(dataFromServer);
-    socket.emit('dataToServer',{data: "Data from the Client"})
-    
-    socket.on('ping',()=>{
-        console.log('first was recieved from the server');
-    })
-
-    socket.on('pong',(latency)=>{
-        console.log(latency);
-        console.log("test was sent to the server")
-    })
-
-    socket2.on('welcome', (msg)=>{
-        console.log(msg)
-    })
+    socket.emit('dataToServer',{data: "Data from the Client!"})
 })
 
 document.querySelector('#message-form').addEventListener('submit',(event)=>{
     event.preventDefault();
     const newMessage = document.querySelector('#user-message').value;
-    console.log(newMessage)
     socket.emit('newMessageToServer',{text: newMessage})
 })
+
 socket.on('messageToClients',(msg)=>{
     console.log(msg)
     document.querySelector('#messages').innerHTML += `<li>${msg.text}</li>`

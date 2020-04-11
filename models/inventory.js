@@ -1,4 +1,4 @@
-/* eslint-disable no-undef */
+
 module.exports = function(sequelize, DataTypes) {
     var Inventory = sequelize.define("Inventory", {
         productName: {
