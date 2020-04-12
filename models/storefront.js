@@ -16,6 +16,7 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.STRING,
         }
     });
+    
     Storefront.associate = function(models) {
         Storefront.belongsTo(models.User, {
             foreignKey: {

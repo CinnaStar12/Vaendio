@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 // Requiring path to so we can use relative routes to our HTML files
 var path = require("path");
 
@@ -41,9 +40,7 @@ module.exports = function(app) {
   });
 
   app.get("/chat", function(req, res) {
-    if (req.user) {
-      res.redirect("/chat");
-    }
+    
     res.sendFile(path.join(__dirname, "../public/chat.html"));
   });
 
