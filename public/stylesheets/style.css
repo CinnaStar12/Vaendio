@@ -72,3 +72,39 @@ h2{
   text-align: center;
   
 }
+/* chat */
+
+#room {
+  background-color: rgb(63, 64, 68);
+}
+#chat-room {
+  justify-content: center;
+  width: 50%;
+  height: fit-content;
+  margin: 0 auto;
+  text-align: center;
+  background-color: white;
+  padding-bottom: 30%;
+}
+input{
+  width: 100%;
+}
+#name{
+  float: none;
+}
+#text, #local {
+  float: left;
+
+  }
+
+#time {
+  float: right;
+}
+
+#message-form{
+  margin-bottom: 0 auto;
+}
+
+
+
+

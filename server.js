@@ -16,7 +16,11 @@ io.on('connection',(socket) => {
   // console.log('welcome')
 
   socket.emit('message', 'Welcome!')
-  socket.broadcast.emit('message','A new user has joine')
+  socket.broadcast.emit(`message`+`{{username}}`+ `joined`)
+
+  // socket.on('join', ({username})=>{
+  //   socket.join(username)
+  // })
 
   socket.on('sendMessage', (message, callback)=>{
     
@@ -35,7 +39,7 @@ io.on('connection',(socket) => {
   })
 
   socket.on('disconnect', ()=>{
-    io.emit('message','A user has left')
+    io.emit('message',+`{{username}}`+'left')
   })
 })
 
