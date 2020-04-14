@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 module.exports = function(sequelize, DataTypes) {
     var Storefront = sequelize.define("Storefront", {
         latitude: {
