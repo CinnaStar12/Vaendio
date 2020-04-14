@@ -23,8 +23,8 @@ function initMap() {
       anchor: new google.maps.Point(0, 0)
     };
     var position = {
-      lat: parseFloat(data[i].latitude).toFixed(6),
-      lng: parseFloat(data[i].longitude).toFixed(6)
+      lat: parseFloat(data[i].latitude),
+      lng: parseFloat(data[i].longitude)
     }
     console.log(position)
     var marker = new google.maps.Marker({
