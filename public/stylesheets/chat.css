@@ -1,0 +1,51 @@
+
+body {
+    justify-content: center;
+    background: url("../assets/backgroung.png");
+    width: 100%;
+    height: fit-content;
+    margin: 0 auto;
+    text-align: center;
+    background-color: white;
+    padding-top: 2%;
+    bottom: 0;
+    position: absolute;
+  }
+  #name{
+    float: left;
+    margin-left: 10%;
+  }
+  #time {
+    float: right;
+    margin-right: 10%;
+  }
+  #send{
+      padding: 24px;
+      margin-bottom: 0px;
+  }
+  button{
+    background-color: rgb(100, 172, 66);
+    border: outset;
+    border-color: yellowgreen;
+    border-radius: 20px;
+    padding: 2%;
+  }
+  input{
+    width: 70%;
+    padding: 2%;
+    float: left;
+    border-radius: 20px;
+    margin-left: 3%;
+  }
+  #message-form{
+    margin-left: 8%;
+    margin-right: 20px;
+    position: relative;
+    bottom: 2%;
+    width: 85%;
+  }
+  #msg-tem {
+      margin-top: 10px;
+  }
+
+
