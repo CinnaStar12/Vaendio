@@ -37,7 +37,7 @@ function initMap() {
 
     google.maps.event.addListener(marker, "click", function (marker) {
       $("#overlay").css("display","block")
-      var invUrl = "/api/inventory/:" + storefrontId
+      var invUrl = "/api/inventory/" + storefrontId
       console.log(invUrl)
       $.ajax({
         url: invUrl,
