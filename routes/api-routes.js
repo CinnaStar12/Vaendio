@@ -45,8 +45,7 @@ module.exports = function (app) {
         res.status(401).json(err);
       });
   });
-  app.post("/api/inventory", function (req, res) {
-  
+  app.post("/api/inventory/", function (req, res) {
     db.Inventory.create({
       productName: req.body.productName,
       onHand: req.body.onHand,
@@ -55,38 +54,42 @@ module.exports = function (app) {
     }).catch(function (err) {
       res.status(404).json(err)
     })
-  
+
   });
-  app.get("/api/inventory", function (req, res) {
-    db.Inventory.findAll({}).then(function (data) {
+  app.get("/api/inventory/:id", function (req, res) {
+    db.Inventory.findAll({
+      where:
+        { StorefrontId: req.params.id}
+    }).then(function (data) {
       res.json(data)
     })
   })
 
-  app.post("/api/storefronts", function (req, res) {
-    
-      db.Storefront.create({
-        latitude: req.body.latitude,
-        longitude: req.body.longitude,
-        address: req.body.address,
-        paymentTypes: req.body.paymentTypes,
-        time: req.body.time,
-        UserId: req.user.id
+  app.post("/api/storefronts/", function (req, res) {
+
+
+    db.Storefront.create({
+      latitude: req.body.latitude,
+      longitude: req.body.longitude,
+      address: req.body.address,
+      paymentTypes: req.body.paymentTypes,
+      time: req.body.time,
+      UserId: req.user.id
+    })
+      .then(function () {
+        res.status(201)
+        res.json(req.body)
       })
-        .then(function () {
-          res.status(201)
-          res.json(req.body)
-        })
-        .catch(function (err) {
-          res.status(401).json(err)
-        })
-    
+      .catch(function (err) {
+        res.status(401).json(err)
+      })
+
   })
 
   app.get("/api/storefronts/", function (req, res) {
     db.Storefront.findAll({}).then(function (data) {
       return res.json(data)
-    }).catch(function (err){
+    }).catch(function (err) {
       res.status(404).json(err)
     })
   });
@@ -113,5 +116,5 @@ module.exports = function (app) {
       });
     }
   });
-  
+
 };
