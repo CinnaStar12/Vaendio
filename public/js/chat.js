@@ -12,7 +12,6 @@ const locationMessageTemplate = document.querySelector('#loc-msg-tem').innerHTML
 
 // const username = prompt('Enter your name')
 
-
 socket.on('message', (message) => {
     console.log(message)
 const html = Mustache.render(messageTemplate,{
@@ -72,4 +71,4 @@ $.get("/api/user_data" ).then(function (data) {
     email = data.email
     })
 
-    
+ 
