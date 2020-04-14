@@ -71,6 +71,7 @@ module.exports = function (app) {
 
 
     db.Storefront.create({
+      name: req.body.name,
       latitude: req.body.latitude,
       longitude: req.body.longitude,
       address: req.body.address,

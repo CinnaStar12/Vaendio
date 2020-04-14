@@ -35,6 +35,7 @@ $(document).ready(function () {
     var state = $("#inputState").val();
     var payment = $("#payment").val();
     var time = $("#time").val();
+    var name = $("#name").val();
 
     console.log(address + city + state)
     var queryUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${address},${city},${state}&key=AIzaSyBrWOit0v-QYF9j_8TSM7S6wyLCyAZalJI`
@@ -47,6 +48,7 @@ $(document).ready(function () {
       var addressLine = `${address}, ${city}, ${state}`
 
       var newStorefront = {
+        name: name,
         latitude: coord.lat,
         longitude: coord.lng,
         address: addressLine,
