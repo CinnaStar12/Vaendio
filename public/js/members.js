@@ -1,10 +1,8 @@
 
-var apiKey = process.env.API_KEY
 $(document).ready(function () {
-  console.log($)
 
-  $("#inv-submit").on("submit", function(e) {
-    event.preventDefault();
+  $("#inv-submit").on("click", function(e) {
+    e.preventDefault();
 
     var product = $("#product").val();
     var stock = $("#stock").val();
@@ -15,7 +13,7 @@ $(document).ready(function () {
     }
 
     $.ajax({
-      url: "api/inventory",
+      url: "/api/inventory",
       method: "POST",
       data: newInv
     }).then(function(res) {
@@ -23,8 +21,12 @@ $(document).ready(function () {
     })
   });
 
+  
+  
+  
   $("#location-submit").on("click", function(e) {
-    e.preventDefault(); 
+    e.preventDefault();
+    e.stopPropagation();
 
     var address = $("#inputAddress").val();
     var city = $("#inputCity").val();
@@ -33,7 +35,7 @@ $(document).ready(function () {
     var time = $("#time").val();
 
     console.log(address + city + state)
-    var queryUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${address},${city},${state}&key=` + apiKey
+    var queryUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${address},${city},${state}&key=AIzaSyBrWOit0v-QYF9j_8TSM7S6wyLCyAZalJI`
     console.log(queryUrl)
     $.ajax({
       url: queryUrl,
@@ -60,7 +62,4 @@ $(document).ready(function () {
       
     }
   )})
-
-
-
 });
