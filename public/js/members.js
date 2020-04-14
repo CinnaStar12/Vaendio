@@ -59,7 +59,7 @@ $(document).ready(function () {
         data: newStorefront
       }).then((result) => {
         console.log(newStorefront);
-        window.refresh();
+        document.refresh();
       })
       
     }
