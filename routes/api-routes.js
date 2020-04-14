@@ -49,6 +49,7 @@ module.exports = function (app) {
     db.Inventory.create({
       productName: req.body.productName,
       onHand: req.body.onHand,
+      price: req.body.price,
       UserId: req.user.id
     }).then(function () {
       res.json(req.body)
