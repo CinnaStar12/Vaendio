@@ -21,16 +21,6 @@ $(document).ready(function () {
     })
   });
 
-<<<<<<< HEAD
-  $("#location-submit").on("submit", function(e) {
-    event.preventDefault();
-    var address = $("#inputAddress").val();
-    var city = $("#inputCity").val();
-    var state = $("#inputState").val();
-
-    var queryUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${address},${city},${state}&key=${process.env.GOOGLE_API}`
-
-=======
   $("#location-submit").on("click", function(e) {
     e.preventDefault(); 
 
@@ -40,7 +30,6 @@ $(document).ready(function () {
     console.log(address + city + state)
     var queryUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${address},${city},${state}&key=`
     console.log(queryUrl)
->>>>>>> 1c64e03... still fixing stuff
     $.ajax({
       url: queryUrl,
       method: "GET",
