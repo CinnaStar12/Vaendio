@@ -35,7 +35,7 @@ $(document).ready(function () {
     var time = $("#time").val();
 
     console.log(address + city + state)
-    var queryUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${address},${city},${state}&key=AIzaSyBrWOit0v-QYF9j_8TSM7S6wyLCyAZalJI`
+    var queryUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${address},${city},${state}&key=`
     console.log(queryUrl)
     $.ajax({
       url: queryUrl,
