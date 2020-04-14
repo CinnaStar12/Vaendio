@@ -61,16 +61,13 @@ module.exports = function (app) {
   })
 
   app.post("/api/storefronts", function (req, res) {
-    if (!req.user) {
-      res.status(401)
-    }
-    else {
+    
       db.Storefront.create({
         latitude: req.body.latitude,
         longitude: req.body.longitude,
+        address: req.body.address,
         paymentTypes: req.body.paymentTypes,
         time: req.body.time,
-        UserId: req.user
       })
         .then(function () {
           res.status(201)
@@ -79,7 +76,7 @@ module.exports = function (app) {
         .catch(function (err) {
           res.status(401).json(err)
         })
-    }
+    
   })
 
   app.get("/api/storefronts/", function (req, res) {
