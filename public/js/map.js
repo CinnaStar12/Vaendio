@@ -43,7 +43,7 @@ function initMap() {
         url: invUrl,
         method: "GET"
       }).then(function(results){
-        console.log(results)
+        res.json(results)
       })
     })
 
