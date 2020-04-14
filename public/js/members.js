@@ -23,13 +23,13 @@ $(document).ready(function () {
   });
 
   $("#location-submit").on("click", function(e) {
-    e.preventDefault();
+    e.preventDefault(); 
 
     var address = $("#inputAddress").val();
     var city = $("#inputCity").val();
     var state = $("#inputState").val();
     console.log(address + city + state)
-    var queryUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${address},${city},${state}&key=AIzaSyBrWOit0v-QYF9j_8TSM7S6wyLCyAZalJI`
+    var queryUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${address},${city},${state}&key=`
     console.log(queryUrl)
     $.ajax({
       url: queryUrl,

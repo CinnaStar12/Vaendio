@@ -89,18 +89,3 @@ function closeOverlay(){
 //           markersArray.push(marker);
 //         }
     
-<<<<<<< Updated upstream
-//       });
-=======
-      });
-})
-<<<<<<< Updated upstream
-// $(document).ready(function () {
-//   // $.get("/api/vendors").then(function (data) {
-//   //   console.log(data);
-//   // });
->>>>>>> Stashed changes
-// })
-=======
-
->>>>>>> Stashed changes
