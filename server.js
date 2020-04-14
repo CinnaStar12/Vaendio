@@ -16,23 +16,21 @@ app.use(express.static(publicDirectoryPath))
 
 io.on('connection',(socket) => {
 
-  socket.emit('message', 'Welcome!')
+  socket.emit('message', 'Welcome!  ' ,`{email}`)
   socket.broadcast.emit('message', 'joined')
 
   socket.on('sendMessage', (message, callback)=>{
     const filter = new Filter()
     if (filter.isProfane(message)){
-      return callback('Profanity is not allowed!')
+      return callback()
     }
     io.emit('message', message)
-    callback('Delivered');
+    callback();
   })
-
   socket.on('sendLocation', (coords, callback)=> {
     io.emit('locationMessage', `https://google.com/maps?q=${coords.latitude},${coords.longitude}`)
     callback()
   })
-
   socket.on('disconnect', ()=>{
     io.emit('message','left')
   })
