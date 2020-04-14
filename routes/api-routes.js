@@ -71,6 +71,7 @@ module.exports = function (app) {
         address: req.body.address,
         paymentTypes: req.body.paymentTypes,
         time: req.body.time,
+        UserId: req.user.id
       })
         .then(function () {
           res.status(201)
