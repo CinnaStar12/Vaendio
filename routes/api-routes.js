@@ -45,45 +45,32 @@ module.exports = function (app) {
         res.status(401).json(err);
       });
   });
-  app.post("api/user_data/inventory", function (req, res) {
-    if(!err){
-      res.status(401);
-    }
-    else{
+  app.post("/api/inventory", function (req, res) {
+  
     db.Inventory.create({
-      productName: req.body.product_name,
-      price: req.body.price,
+      productName: req.body.productName,
       onHand: req.body.onHand,
-      forSale: req.body.forSale,
-      User: req.user
     }).then(function () {
       res.json(req.body)
     }).catch(function (err) {
       res.status(404).json(err)
     })
-  }
+  
   });
-  app.get("api/user_data/inventory/", function (req, res) {
-    db.Inventory.findAll({
-      where: {
-        UserId: req.user.id
-      }
-    }).then(function (data) {
+  app.get("/api/inventory", function (req, res) {
+    db.Inventory.findAll({}).then(function (data) {
       res.json(data)
     })
   })
 
   app.post("/api/storefronts", function (req, res) {
-    if (!req.user) {
-      res.status(401)
-    }
-    else {
+    
       db.Storefront.create({
         latitude: req.body.latitude,
         longitude: req.body.longitude,
+        address: req.body.address,
         paymentTypes: req.body.paymentTypes,
         time: req.body.time,
-        UserId: req.user
       })
         .then(function () {
           res.status(201)
@@ -92,7 +79,7 @@ module.exports = function (app) {
         .catch(function (err) {
           res.status(401).json(err)
         })
-    }
+    
   })
 
   app.get("/api/storefronts/", function (req, res) {
