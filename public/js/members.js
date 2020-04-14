@@ -6,10 +6,12 @@ $(document).ready(function () {
 
     var product = $("#product").val();
     var stock = $("#stock").val();
+    var saleprice = $("#price").val()
 
     var newInv = {
       productName: product,
-      onHand: stock
+      onHand: stock,
+      price: saleprice
     }
 
     $.ajax({
