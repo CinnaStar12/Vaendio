@@ -9,12 +9,13 @@ function initMap() {
   });
   $.ajax({
     url: "/api/storefronts",
-    methode: "GET"
+    method: "GET"
   }).then(function(results){
   console.log(results)
     var data = results
     
   for (var i = 0; i < data.length; i++) {
+    var storefrontId = data[i].id
     console.log(data[i].latitude)
     var icon = {
       url: "./assets/vendor.png",
@@ -31,12 +32,19 @@ function initMap() {
       position: position,
       map: map,
       icon: icon,
-      index: i
+      index: i,
     })
 
     google.maps.event.addListener(marker, "click", function (marker) {
       $("#overlay").css("display","block")
-      console.log("click")
+      var invUrl = "/api/inventory/" + storefrontId
+      console.log(invUrl)
+      $.ajax({
+        url: invUrl,
+        method: "GET"
+      }).then(function(results){
+        console.log(results)
+      })
     })
 
     markersArray.push(marker);

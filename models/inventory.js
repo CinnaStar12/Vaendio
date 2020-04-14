@@ -4,7 +4,6 @@ module.exports = function(sequelize, DataTypes) {
         productName: {
             type: DataTypes.STRING,
             allowNull: false,
-
         },
         price: {
             type: DataTypes.DECIMAL,
@@ -16,15 +15,15 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.BOOLEAN,
             defaultValue: true
         }
-
     });
-    // Inventory.associate = function(models) {
-    //     Inventory.belongsTo(models.User, {
-    //         foreignKey: {
-    //             allowNull: false
-    //         }
-    //     });
-    // };
+    Inventory.associate = function(models) {
+        Inventory.belongsTo(models.User, {
+
+        }),
+        Inventory.belongsTo(models.Storefront, {
+
+        });
+    };
     
     return Inventory;
 }
