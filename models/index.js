@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 'use strict';
 
 var fs        = require('fs');

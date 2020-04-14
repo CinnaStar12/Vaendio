@@ -1,8 +1,8 @@
-$(document).ready(function () {
-  console.log($)
 
-  $("#inv-submit").on("submit", function(e) {
-    event.preventDefault();
+$(document).ready(function () {
+
+  $("#inv-submit").on("click", function(e) {
+    e.preventDefault();
 
     var product = $("#product").val();
     var stock = $("#stock").val();
@@ -13,7 +13,7 @@ $(document).ready(function () {
     }
 
     $.ajax({
-      url: "api/inventory",
+      url: "/api/inventory",
       method: "POST",
       data: newInv
     }).then(function(res) {
@@ -21,14 +21,22 @@ $(document).ready(function () {
     })
   });
 
-  $("#location-submit").on("submit", function(e) {
-    event.preventDefault();
+  
+  
+  
+  $("#location-submit").on("click", function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+
     var address = $("#inputAddress").val();
     var city = $("#inputCity").val();
     var state = $("#inputState").val();
+    var payment = $("#payment").val();
+    var time = $("#time").val();
 
-    var queryUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${address},${city},${state}&key=${process.env.GOOGLE_API}`
-
+    console.log(address + city + state)
+    var queryUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${address},${city},${state}&key=`
+    console.log(queryUrl)
     $.ajax({
       url: queryUrl,
       method: "GET",
@@ -40,6 +48,8 @@ $(document).ready(function () {
         latitude: coord.lat,
         longitude: coord.lng,
         address: addressLine,
+        paymentTypes: payment,
+        time: time
       }
       $.ajax({
         url: "/api/storefronts",
@@ -52,7 +62,4 @@ $(document).ready(function () {
       
     }
   )})
-
-
-
 });
