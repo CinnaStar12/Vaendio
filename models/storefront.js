@@ -1,11 +1,11 @@
 module.exports = function (sequelize, DataTypes) {
     var Storefront = sequelize.define("Storefront", {
         latitude: {
-            type: DataTypes.DECIMAL(20),
+            type: DataTypes.DECIMAL(8,6),
             allowNull: false
         },
         longitude: {
-            type: DataTypes.DECIMAL(20),
+            type: DataTypes.DECIMAL(8,6),
             allowNull: false
         },
         address: {
@@ -19,13 +19,14 @@ module.exports = function (sequelize, DataTypes) {
         }
     });
 
-    // Storefront.associate = function (models) {
-    //     Storefront.belongsTo(models.User, {
-    //         foreignKey: {
-    //             allowNull: false
-    //         }
-    //     })
-    // }
+    Storefront.associate = function (models) {
+        Storefront.belongsTo(models.User, {
+           
+        })
+        Storefront.hasMany(models.Inventory, {
+
+        })
+    }
 
     return Storefront;
 }
