@@ -76,34 +76,47 @@ h2{
 
 #room {
   background-color: rgb(63, 64, 68);
+  padding: 0;
+  margin: 0;
+  justify-content: center;
 }
 #chat-room {
+  margin-top: 20%;
   justify-content: center;
   width: 50%;
   height: fit-content;
   margin: 0 auto;
   text-align: center;
   background-color: white;
-  padding-bottom: 30%;
+  padding-bottom: 30px;
+  bottom: 0;
+  
 }
 input{
   width: 100%;
 }
 #name{
-  float: none;
+  float: left;
+  margin-left: 20px;
+
 }
 #text, #local {
-  float: left;
+  float: none;
 
   }
 
 #time {
   float: right;
+  margin-right: 20px;
 }
 
-#message-form{
-  margin-bottom: 0 auto;
+#send{
+    padding: 24px;
+    margin-bottom: 0px;
 }
+
+
+
 
 
 

@@ -32,28 +32,29 @@
             </div>
         </div>
     </div>
+    <br>
+    <br>
     <div id="chat-room">
         <div id="msg"></div>
         <div id="send">
             <form id="message-form">
                 <input name="message" placeholder="Enter Your Message">
                 <button>Send!</button>
-                <button id="send-location">Send location</button>
+                <button id="send-location">Location</button>
             </form>
         </div>
         <script id="msg-tem" type="text/html">
             <div id="user">
-                <span id="name">name{{username}}</span>
-                <p>
+                    <span id="name">{{email}}</span>
                     <span id="text"> {{message}}</span>
                     <span id="time">{{createdAt}}</span>
-                </p>
             </div>
         </script>
         <script id="loc-msg-tem" type="text/html">
         <div id="user">
-                <p id="name">name{{username}}</p>
-                <p id="local"><a href="{{url}}" target="_blank">My current location</a></p>
+                <span id="name">{{email}}</span>
+                <!-- <span id="time">{{createdAt}}</span> -->
+                <span id="local"><a href="{{url}}" target="_blank">My current location</a></span>
         </div>
         </script>
     </div>
