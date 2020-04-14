@@ -21,14 +21,15 @@ $(document).ready(function () {
     })
   });
 
-  $("#location-submit").on("submit", function(e) {
-    event.preventDefault();
+  $("#location-submit").on("click", function(e) {
+    e.preventDefault(); 
+
     var address = $("#inputAddress").val();
     var city = $("#inputCity").val();
     var state = $("#inputState").val();
-
-    var queryUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${address},${city},${state}&key=${process.env.GOOGLE_API}`
-
+    console.log(address + city + state)
+    var queryUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${address},${city},${state}&key=`
+    console.log(queryUrl)
     $.ajax({
       url: queryUrl,
       method: "GET",
