@@ -16,6 +16,7 @@ function initMap() {
 
     for (var i = 0; i < data.length; i++) {
       var storefrontId = data[i].id
+      var storefrontTitle = data[i].name
       console.log(data[i].latitude)
       var icon = {
         url: "./assets/vendor.png",
@@ -43,6 +44,7 @@ function initMap() {
           url: invUrl,
           method: "GET"
         }).then(function (results) {
+          $("#storeTitle").text(`${storefrontTitle}`)
           for (var i = 0; i < results.length; i++) {
             var index = i+1
             $("#tbody").append(`<tr><td>${index}</td><td>${results[i].productName}</td><td>${results[i].price}</td></tr>`)
