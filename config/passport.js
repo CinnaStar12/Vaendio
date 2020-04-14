@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 var passport = require("passport");
 var LocalStrategy = require("passport-local").Strategy;
 

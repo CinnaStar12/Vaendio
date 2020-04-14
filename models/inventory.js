@@ -1,3 +1,4 @@
+
 module.exports = function(sequelize, DataTypes) {
     var Inventory = sequelize.define("Inventory", {
         productName: {
@@ -12,17 +13,18 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.INTEGER(3)
         },
         forSale: {
-            type: DataTypes.BOOLEAN
+            type: DataTypes.BOOLEAN,
+            defaultValue: true
         }
 
     });
-    Inventory.associate = function(models) {
-        Inventory.belongsTo(models.User, {
-            foreignKey: {
-                allowNull: false
-            }
-        });
-    };
+    // Inventory.associate = function(models) {
+    //     Inventory.belongsTo(models.User, {
+    //         foreignKey: {
+    //             allowNull: false
+    //         }
+    //     });
+    // };
     
     return Inventory;
 }

@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 // Requiring bcrypt for password hashing. Using the bcryptjs version as the regular bcrypt module sometimes causes errors on Windows machines
 var bcrypt = require("bcryptjs");
 // Creating our User model
@@ -35,13 +36,14 @@ module.exports = function(sequelize, DataTypes) {
     user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
   });
 
-  User.associate = function(models) {
-    User.hasMany(models.Inventory, {
-      onDelete: "cascade"
-    })
-    User.hasMany(models.Storefront, {
-      onDelete: "cascade"
-    })
-  }
+  // User.associate = function(models) {
+  //   User.hasMany(models.Inventory, {
+  //     onDelete: "cascade"
+  //   })
+  //   User.hasMany(models.Storefront, {
+  //     onDelete: "cascade"
+  //   })
+  // }
   return User;
 };
+                            
