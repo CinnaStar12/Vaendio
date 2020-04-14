@@ -114,6 +114,9 @@ input{
     padding: 24px;
     margin-bottom: 0px;
 }
+#payment{
+ float: left; 
+}
 
 
 
