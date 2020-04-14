@@ -49,6 +49,7 @@ module.exports = function (app) {
     db.Inventory.create({
       productName: req.body.productName,
       onHand: req.body.onHand,
+      UserId: req.user.id
     }).then(function () {
       res.json(req.body)
     }).catch(function (err) {
@@ -59,7 +60,7 @@ module.exports = function (app) {
   app.get("/api/inventory/:id", function (req, res) {
     db.Inventory.findAll({
       where:
-        { StorefrontId: req.params.id}
+        { UserId: req.params.id}
     }).then(function (data) {
       res.json(data)
     })
