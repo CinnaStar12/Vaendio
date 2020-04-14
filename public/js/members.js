@@ -1,3 +1,5 @@
+
+var apiKey = process.env.API_KEY
 $(document).ready(function () {
   console.log($)
 
@@ -27,8 +29,11 @@ $(document).ready(function () {
     var address = $("#inputAddress").val();
     var city = $("#inputCity").val();
     var state = $("#inputState").val();
+    var payment = $("#payment").val();
+    var time = $("#time").val();
+
     console.log(address + city + state)
-    var queryUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${address},${city},${state}&key=`
+    var queryUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${address},${city},${state}&key=` + apiKey
     console.log(queryUrl)
     $.ajax({
       url: queryUrl,
@@ -41,6 +46,8 @@ $(document).ready(function () {
         latitude: coord.lat,
         longitude: coord.lng,
         address: addressLine,
+        paymentTypes: payment,
+        time: time
       }
       $.ajax({
         url: "/api/storefronts",

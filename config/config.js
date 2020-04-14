@@ -5,7 +5,7 @@ module.exports = {
   "development": 
   {
     "username": "root",
-    "password": "Nuid.2013",
+    "password": process.env.DB_PASS,
     "database": "passport_demo",
     "host": "localhost",
     "dialect": "mysql"
