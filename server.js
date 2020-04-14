@@ -15,8 +15,10 @@ app.use(express.static(publicDirectoryPath))
 
 
 io.on('connection',(socket) => {
+ 
 
-  socket.emit('message', 'Welcome!  ' ,`{email}`)
+  
+  socket.emit('message', 'Welcome!')
   socket.broadcast.emit('message', 'joined')
 
   socket.on('sendMessage', (message, callback)=>{
@@ -35,6 +37,8 @@ io.on('connection',(socket) => {
     io.emit('message','left')
   })
 })
+
+
 // Requiring passport as we've configured it 
 var passport = require("./config/passport");
 var dotenv = require("dotenv")

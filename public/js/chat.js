@@ -71,4 +71,4 @@ $.get("/api/user_data" ).then(function (data) {
     email = data.email
     })
 
-    
+ 
